@@ -9,12 +9,15 @@ import menu from "/icons/menu.svg";
 import downArrow from "/icons/downArrow.svg";
 import { navMenu } from "../../constants/index";
 import PromotionBar from "./PromotionBar";
+import MobileNavbar from "./MobileNavbar";
 
-const Navbar = () => {
+
+
+const Navbar = ({isOpen,handleOpen}) => {
   return (
-    <header>
+    <header >
     <PromotionBar/>
-      <nav className="lg:h-[150px] relative w-full flex px-3 py-[15px] flex-col place-content-between items-center  overflow-hidden">
+      <nav className="lg:h-[150px] md:flex hidden relative w-full  px-3 py-[15px] flex-col place-content-between items-center  overflow-hidden">
         {/* number */}
         <div className="flex absolute items-center gap-x-2 left-3.5 top-[10%] ">
           <img src={phone} />
@@ -38,7 +41,7 @@ const Navbar = () => {
               <NavLink
               to={navItem.href}
               className={({ isActive }) =>
-                `relative  before:content-[''] before:absolute before:left-0 before:-bottom-1.5 before:h-[2px] before:bg-[#3A643B] before:transition-all before:duration-500 ${
+                `relative  before:content-[''] before:absolute before:left-0 before:-bottom-1.5 before:h-[2px] text-nowrap before:bg-[#3A643B] before:transition-all before:duration-500 ${
                   isActive ? "before:w-full" : "before:w-0 hover:before:w-full"
                 }`
               }
@@ -84,6 +87,10 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* MOBILE Navbar */}
+      <MobileNavbar isOpen={isOpen} handleOpen={handleOpen}/>
+      
     </header>
   );
 };

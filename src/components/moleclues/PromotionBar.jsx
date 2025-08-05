@@ -5,7 +5,7 @@ const PromotionBar = () => {
   return (
     <div
         role="banner"
-        className="w-full h-[70px] bg-[#373636] flex items-center justify-center relative "
+        className="w-full h-[70px] bg-[#373636] md:flex hidden items-center justify-center relative "
       >
         <p className="text-[#D9D9D9] font-DM_Sans font-medium text-[20px]">
           Your first 5 minutes instant call is free.

@@ -6,7 +6,7 @@ import cart from '/mobile/cart.svg'
 
 const MobileNavbar = ({ handleOpen }) => {
   return (
-    <nav className="md:hidden py-3.5 flex justify-between">
+    <nav className="md:hidden py-3.5 flex justify-between  px-3">
       <img
         src={hamburger}
         className="w-[24px] h-[24px]"

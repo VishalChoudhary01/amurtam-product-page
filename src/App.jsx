@@ -14,7 +14,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFF7E2] md:px-0 px-3">
+    <div className="flex flex-col min-h-screen bg-[#FFF7E2] ">
      
       <Navbar isOpen={isOpen} handleOpen={handleOpen}/>
       <MobileSlideMenu isOpen={isOpen} handleOpen={handleOpen} />

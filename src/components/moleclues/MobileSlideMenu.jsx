@@ -10,7 +10,7 @@ const MobileSlideMenu = ({ isOpen, handleOpen }) => {
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 bg-amber-950/10 backdrop-blur-3xl bg-opacity-30 z-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-amber-900/5 backdrop-blur-xl  z-40 transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={handleOpen}
@@ -19,7 +19,7 @@ const MobileSlideMenu = ({ isOpen, handleOpen }) => {
 
       {/* Sidebar menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-56 bg-[#FFF7E2] z-50 shadow-xl transition-transform duration-300 ease-in-out transform ${
+        className={`fixed top-0 left-0 h-full w-56 bg-[#FFF7E2]  z-50 shadow-xl transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -43,14 +43,14 @@ const MobileSlideMenu = ({ isOpen, handleOpen }) => {
               to={item.href}
               onClick={handleOpen}
               className={({ isActive }) => 
-                `relative px-5 py-3 text-[#3A643C] font-DM_Sans text-base
+                `relative px-5 py-2.5 text-[#3A643C] font-DM_Sans text-base
                  transition-all duration-300 hover:bg-gray-50
                  ${isActive ? "font-medium" : ""}`
               }
             >
               {({ isActive }) => (
                 <span className={`
-                  relative inline-block py-1
+                  relative inline-block pb-1
                   before:content-[''] before:absolute before:left-0 before:bottom-0 
                   before:h-[2px] before:bg-[#3A643C] before:transition-all before:duration-300
                   ${isActive ? "before:w-full" : "before:w-0 hover:before:w-full"}

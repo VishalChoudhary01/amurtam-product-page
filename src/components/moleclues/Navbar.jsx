@@ -68,7 +68,7 @@ const Navbar = ({isOpen,handleOpen}) => {
                 alt="cart icon"
                 role="button"
                 aria-label="Cart with 1 item"
-                className="group-hover:scale-1 transition-all"
+                className=" transition-all"
               />
               <div className="absolute bottom-7 -right-2.5 w-[24px] h-[24px] flex justify-center shadow-md items-center rounded-full bg-[#3A643C]">
                 <p className="font-Poppins text-[10px] text-white">1</p>
